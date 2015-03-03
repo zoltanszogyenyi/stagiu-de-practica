@@ -81,6 +81,6 @@ int main() {
    			printf("(%d %d) ", a[i], b[j]);
    		}
    	}
-   	
+
 	return 0;
 }
