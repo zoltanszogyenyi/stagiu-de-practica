@@ -1,5 +1,3 @@
-
-
 /*
 
 Student:              Szogyenyi Zoltan
