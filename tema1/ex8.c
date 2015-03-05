@@ -6,7 +6,7 @@ Materie:              Stagiu de Practica
 Limbaj de programare: C
 Data:                 Martie 3 2015 - Marti
 
-7.) Exercitiul:
+8.) Exercitiul:
 
 Se considera un polinom cu coeficienti reali de 2 variabile x si y.
 Sa se implementeze functii pentru adunarea, scaderea si inmultirea
