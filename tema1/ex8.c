@@ -20,16 +20,16 @@ int main() {
 	// coeficientii polinoamelor
 	int a, b, c, d;
 	
-	printf("Coeficintul a\n");
+	printf("Coeficientul a\n");
 	scanf("%d", &a);
-	printf("Coeficintul b\n");
+	printf("Coeficientul b\n");
 	scanf("%d", &b);
 
 	printf("%dx + %dy\n", a, b);
 
-	printf("Coeficintul c\n");
+	printf("Coeficientul c\n");
 	scanf("%d", &c);
-	printf("Coeficintul d\n");
+	printf("Coeficientul d\n");
 	scanf("%d", &d);
 
 	printf("%dx + %dy\n", c, d);
