@@ -6,7 +6,7 @@ Materie:              Stagiu de Practica
 Limbaj de programare: C
 Data:                 Martie 3 2015 - Marti
 
-1.) Exercitiul:
+6.) Exercitiul:
 
 Citeste un sir de numere intregi si il ordoneaza crescator
 folosind sortarea prin metoda insertiei. Elementele se
