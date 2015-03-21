@@ -41,6 +41,8 @@ int main()
 {
 	char a[10][10];
 	int n;
+	float diagonal_count = 0;
+	float uppercase_count = 0, lowercase_count = 0, numbers_count = 0;
 
 	// Se citesc de la tastatură elementele unei matrici de caractere (nr. linii=nr.coloane), A(NxN), N<=10
 	printf("The size of the matrix: ");
@@ -68,6 +70,22 @@ int main()
 			if (i == j)
 			{
 				printf("%c", a[i][j]);
+				diagonal_count++;
+			}
+		}
+	}
+	printf("\n");
+
+	// d) Să se afişeze cuvântul format din caracterele de pe diagonala secundară;
+	printf("The secondary diagonal's characters: ");
+	for (int i = 0; i < n; ++i)
+	{
+		for (int j = 0; j < n; ++j)
+		{
+			if (i == (n-j-1))
+			{
+				printf("%c", a[i][j]);
+				diagonal_count++;
 			}
 		}
 	}
@@ -83,13 +101,25 @@ int main()
 			{
 				if (a[i][j] <= 'Z' && a[i][j] >= 'A')
 				{
+					if (i == j || i == (n-j-1))
+					{
+						 uppercase_count++;
+					}
 					uppercase++;
 				} else if (a[i][j] <= 'z' && a[i][j] >= 'a')
 				{
+					if (i == j || i == (n-j-1))
+					{
+						 lowercase_count++;
+					}
 					lowercase++;
 				}
 			} else if (isdigit(a[i][j]))
 			{
+				if (i == j || i == (n-j-1))
+					{
+						 numbers_count++;
+					}
 				numbers++;
 			}
 		}
@@ -99,18 +129,10 @@ int main()
 	printf("Number of lowercase letters: %d\n", lowercase);
 	printf("Number of numbers          : %d\n", numbers);
 
-	// d) Să se afişeze cuvântul format din caracterele de pe diagonala secundară;
-	printf("The secondary diagonal's characters: ");
-	for (int i = 0; i < n; ++i)
-	{
-		for (int j = 0; j < n; ++j)
-		{
-			if (i == (n-j-1))
-			{
-				printf("%c", a[i][j]);
-			}
-		}
-	}
+	// e) Să se afişeze procentul literelor mari, al literelor mici şi al cifrelor de pe cele 2 diagonale
+	printf("Percentage of the uppercase letters in the diagonals: %.1f%%\n", (uppercase_count / diagonal_count) * 100);
+	printf("Percentage of the lowercase letters in the diagonals: %.1f%%\n", (lowercase_count / diagonal_count) * 100);
+	printf("Percentage of the numbers in the diagonals          : %.1f%%\n", (numbers_count / diagonal_count) * 100);
 
 	return 0;
 }
