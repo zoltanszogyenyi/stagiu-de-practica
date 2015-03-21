@@ -134,6 +134,52 @@ int main()
 	printf("Percentage of the lowercase letters in the diagonals: %.1f%%\n", (lowercase_count / diagonal_count) * 100);
 	printf("Percentage of the numbers in the diagonals          : %.1f%%\n", (numbers_count / diagonal_count) * 100);
 
+	// f) Să se afişeze caracterele comune aflate pe liniile p şi q (p, q < N, p şi q citite de la tastatură)
+
+	int p, q, flag;
+	char placeholder;
+
+	printf("Give me the p: ");
+	scanf("%d", &p);
+	printf("Give me the q: ");
+	scanf("%d", &q);
+
+	// for p
+	for (int i = 0; i < n; ++i)
+	{
+		flag = 0;
+		for (int j = i+1; j < n; ++j)
+		{
+			if (a[p][i] == a[p][j] && isalpha(a[p][i]))
+			{
+				flag = 1;
+				placeholder = a[p][i];
+			}
+		}
+		if (flag == 1)
+		{
+			printf("%c ", placeholder);
+		}
+	}
+
+	// for q
+	for (int i = 0; i < n; ++i)
+	{
+		flag = 0;
+		for (int j = i+1; j < n; ++j)
+		{
+			if (a[q][i] == a[q][j] && isalpha(a[q][i]))
+			{
+				flag = 1;
+				placeholder = a[q][i];
+			}
+		}
+		if (flag == 1)
+		{
+			printf("%c ", placeholder);
+		}
+	}
+
 	return 0;
 }
 
