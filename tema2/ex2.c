@@ -9,6 +9,7 @@ Data:                 Martie 21 2015 - Sambata
 2. Se citesc de la tastatură elementele unei matrici de caractere (nr. linii=nr.
 coloane), A(NxN), N<=10.
 
+
 a) Să se afişeze matricea A;
 
 b) Să se formeze şi să se afişeze cuvântul format din caracterele pe pe
