@@ -1,2 +1,2 @@
 # stagiu-de-practica
-Teme pentru Stagiu de Practica scrise in C.
+Teme pentru Stagiu de Practica scrise in C si C++.
